@@ -1,0 +1,56 @@
+.menu-header-logo img {
+    width: 250px;
+}
+.img-brand-list{
+    height: 50px;
+}
+
+.width-30px{
+    width: 30px;
+}
+
+footer.content-footer
+{
+    justify-content: center;
+}
+
+
+.banner-image-list-view {
+    max-height: 110px;
+    max-width: 110px;
+}
+
+.dropzone {
+    padding: 1px;
+    min-height: unset;
+}
+#dropzoneDragArea
+{
+    padding: 30px 0;
+}
+
+.dropzone .dz-preview .dz-image img {
+    height: 120px;
+    width: 120px;
+}
+
+
+.table-responsive{
+    cursor: grab;
+}
+
+
+.post-list-img{
+    height: 200px;
+}
+
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #dbb778;
+    border-color: #dbb778;
+}
+
+.menu-body ul li>a.active{
+    color:black;
+}
