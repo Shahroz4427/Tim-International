@@ -26,7 +26,8 @@ class InquirySubmissionController extends Controller
             'interest'   => json_encode($request->interest),
         ]);
 
-        return redirect()->back()->with('success', 'Thank you! We have successfully received your enquiry and will be in touch shortly.');
+        return response()->json(['message' => 'Thank you! We have successfully received your enquiry and will be in touch shortly.']);
+
     }
 
     public function storeServiceInquiry(Request $request)
@@ -41,7 +42,8 @@ class InquirySubmissionController extends Controller
 
         ServiceInquiry::create($request->only(['service', 'name', 'email', 'phone', 'message']));
 
-        return redirect()->back()->with('success', 'Thank you! We have successfully received your enquiry and will be in touch shortly.');
+        return response()->json(['message' => 'Thank you! We have successfully received your enquiry and will be in touch shortly.']);
+
     }
 
     public function storeCarInquiry(Request $request)
@@ -56,7 +58,8 @@ class InquirySubmissionController extends Controller
 
         CarInquiry::create($request->only(['title', 'name', 'email', 'phone', 'message']));
 
-        return redirect()->back()->with('success', 'Thank you! We have successfully received your enquiry and will be in touch shortly.');
+        return response()->json(['message' => 'Thank you! We have successfully received your enquiry and will be in touch shortly.']);
+
     }
 
 
@@ -78,6 +81,7 @@ class InquirySubmissionController extends Controller
             'message' => $validated['message'],
         ]);
 
-        return redirect()->back()->with('success', 'Thank you! We have successfully received your enquiry and will be in touch shortly.');
+        return response()->json(['message' => 'Thank you! We have successfully received your enquiry and will be in touch shortly.']);
+
     }
 }

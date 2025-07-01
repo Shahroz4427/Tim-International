@@ -1,42 +1,17 @@
-<html class="avada-html-layout-wide avada-html-header-position-top avada-is-100-percent-template ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-137 ua-chrome-137-0 ua-chrome-137-0-0 ua-chrome-137-0-0-0 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js touchevents no-applicationcache audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a canvas canvastext hashchange geolocation history inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color postmessage postmessage-structuredclones video no-video-ogg video-h264 no-video-h265 video-webm video-vp9 no-video-hls no-video-av1 webgl websockets cssanimations backgroundsize borderimage borderradius boxshadow flexbox fontface generatedcontent cssgradients hsla multiplebgs opacity cssreflections rgba textshadow csstransforms supports csstransforms3d csstransitions localstorage sessionstorage no-websqldatabase svgclippaths inlinesvg smil webworkers" lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
+<html lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="max-image-preview:large">
-    <link rel="stylesheet" href="{{ asset('frontend/gallery/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/gallery.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/global.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <style>
-        .thumbnail {
-            border: 2px solid transparent;
-            cursor: pointer;
-            transition: border 0.3s ease;
-            border-radius: 4px;
-        }
-
-
-
-        .thumbnail.active-thumb {
-            border: 3px solid #c50a21;
-            /* or any color you prefer */
-        }
-
-        @media (max-width: 480px) {
-            .thumbnail {
-                height: 80px;
-            }
-
-        }
-
-        p {
-            font-size: 16px;
-        }
-    </style>
     <title>TIM INTERNATIONAL</title>
 </head>
 
@@ -86,13 +61,13 @@
             @include('frontend.footer')
         </div>
     </div>
+    <script  src="{{ asset('frontend/js/global.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
             const mainImage = document.querySelector(".main-image");
             const owl = $('.thumbnail-carousel');
-
             owl.owlCarousel({
                 items: 4,
                 margin: 10,
@@ -102,8 +77,6 @@
                 onInitialized: updateMainImageFromCarousel,
                 onTranslated: updateMainImageFromCarousel
             });
-
-            // Custom nav buttons
             $('.arrow.left').click(function() {
                 owl.trigger('prev.owl.carousel');
             });
@@ -111,8 +84,6 @@
             $('.arrow.right').click(function() {
                 owl.trigger('next.owl.carousel');
             });
-
-            // Click on thumbnail updates main image and active class
             $(document).on('click', '.thumbnail', function() {
                 const src = $(this).attr('src');
                 mainImage.src = src;
@@ -120,8 +91,6 @@
                 $('.thumbnail').removeClass('active-thumb');
                 $(this).addClass('active-thumb');
             });
-
-            // Set main image based on first visible thumbnail
             function updateMainImageFromCarousel() {
                 const current = owl.find('.owl-item.active').first().find('img.thumbnail').attr('src');
                 if (current) {
@@ -135,8 +104,6 @@
                     });
                 }
             }
-
-            // Initialize main image
             updateMainImageFromCarousel();
         });
     </script>

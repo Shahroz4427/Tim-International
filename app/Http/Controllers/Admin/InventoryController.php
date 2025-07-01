@@ -40,20 +40,31 @@ class InventoryController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:135',
             'description' => 'required|string|max:450',
-            'main_image' => 'required',
+            'main_image' => 'required|image',
             'images' => 'nullable|array',
             'images.*' => 'string'
         ]);
-        $path = $request->file('main_image')->store('inventories', 'public');
+    
+        // Resize and store the main image
+        $image = $request->file('main_image');
+        $manager = new ImageManager(new Driver());
+        $resized = $manager->read($image)->cover(2560, 1707);
+        $encoded = $resized->toJpeg();
+    
+        $path = 'inventories/' . $image->hashName();
+        Storage::disk('public')->put($path, $encoded);
+    
+        // Save to DB
         $inventory = new Inventory();
         $inventory->title = $validated['title'];
         $inventory->description = $validated['description'];
-        $inventory->images = json_encode($validated['images']);
+        $inventory->images = json_encode($validated['images'] ?? []);
         $inventory->main_image = $path;
         $inventory->save();
-
+    
         return redirect()->route('admin.manage-inventory.index')->with('success', 'Car added successfully!');
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -72,28 +83,41 @@ class InventoryController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:135',
             'description' => 'required|string|max:450',
-            'main_image' => 'nullable',
+            'main_image' => 'nullable|image',
             'images' => 'nullable|array',
             'images.*' => 'string'
         ]);
-
+    
         $car = Inventory::findOrFail($id);
-
+    
         if ($request->hasFile('main_image')) {
+            // Delete old image if exists
             if ($car->main_image && Storage::disk('public')->exists($car->main_image)) {
                 Storage::disk('public')->delete($car->main_image);
             }
-            $path = $request->file('main_image')->store('inventories', 'public');
+    
+            $image = $request->file('main_image');
+    
+            // Resize the image to 2560x1707 using Intervention Image
+            $manager = new ImageManager(new Driver());
+            $resized = $manager->read($image)->cover(2560, 1707);
+            $encoded = $resized->toJpeg(); // Can also use ->toWebp(), ->toPng() etc.
+    
+            // Save resized image
+            $path = 'inventories/' . $image->hashName();
+            Storage::disk('public')->put($path, $encoded);
+    
             $car->main_image = $path;
         }
-
+    
         $car->title = $validated['title'];
         $car->description = $validated['description'];
         $car->images = json_encode($validated['images'] ?? []);
         $car->save();
-
+    
         return redirect()->route('admin.manage-inventory.index')->with('success', 'Car updated successfully.');
     }
+    
 
     /**
      * Remove the specified resource from storage.

@@ -8,6 +8,8 @@ Manage Car Inquiries
 Car Inquiries
 @endsection
 
+
+
 @push('css')
 <style>
     .toggle-btn {
@@ -21,13 +23,20 @@ Car Inquiries
         box-shadow: none;
     }
 
+    .message-row td {
+        padding: 10px;
+        white-space: normal; /* ensures text wraps */
+        word-break: break-word; /* breaks long words if needed */
+    }
+
     @media (max-width: 480px) {
-       .mobile-vertical-gap{
-        margin-top: 5px;
-       }
+        .mobile-vertical-gap {
+            margin-top: 5px;
+        }
     }
 </style>
 @endpush
+
 
 @section('content')
 

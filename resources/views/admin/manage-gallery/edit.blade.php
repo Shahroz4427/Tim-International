@@ -22,7 +22,7 @@ Edit Gallery
     .dropzone .dz-preview {
         width: 120px;
         height: 120px;
-        margin: 8px;
+        margin: 20px !important;
     }
 
     .dropzone .dz-preview .dz-image {
@@ -47,6 +47,8 @@ Edit Gallery
         text-decoration: none;
         cursor: pointer;
     }
+
+ 
 </style>
 @endpush
 

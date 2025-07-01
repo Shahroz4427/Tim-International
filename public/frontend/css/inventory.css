@@ -58,10 +58,10 @@ body {
     /* Light */
 }
 
-/*! CSS Used from: https://ggclassiccars.com/wp-content/cache/wpo-minify/1749249567/assets/wpo-minify-header-3a5a9c04.min.css ; media=all */
+
 @media all {
     body:after {
-        content: url(https://ggclassiccars.com/wp-content/plugins/instagram-feed/img/sbi-sprite.png);
+        content: url(/sbi-sprite.png);
         display: none;
     }
 
@@ -107,557 +107,140 @@ body {
         max-width: 100%;
     }
 
-    [class^="auto-icon-"]:before,
-    [class^="auto-icon-"]:after {
-        font-family: autolistings;
-        font-size: 20px;
-        font-style: normal;
-        vertical-align: bottom;
-        line-height: unset;
-    }
-
-    [class^="auto-icon-"] {
-        display: inline-block;
-    }
-
-    .auto-icon-odometer:before {
-        content: "\f113";
-    }
-
-    .fa {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .fa-chevron-left:before {
-        content: "\f053";
-    }
-
-    .fa-chevron-right:before {
-        content: "\f054";
-    }
-
-    .auto-listings .container>.content {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    [class^=auto-listings-],
-    [class*=" auto-listings-"] {
-        box-sizing: border-box;
-    }
-
-    [class^=auto-listings-]:before,
-    [class*=" auto-listings-"]:before,
-    [class^=auto-listings-]:after,
-    [class*=" auto-listings-"]:after {
-        box-sizing: inherit;
-    }
-
-    .auto-listings .full-width {
-        display: inline-block;
-        width: 100%;
-    }
-
-    .auto-listings-single img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    .auto-listings-single .title,
-    .auto-listings-single .auto-listings-tabs table {
-        text-align: left;
-    }
-
-    .auto-listings .price {
-        color: #337ab7;
-    }
-
-    .auto-listings span.condition {
-        color: #888;
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 12px;
-        margin: 0;
-        padding: 0;
-        text-transform: capitalize;
-    }
-
-    .auto-listings-single .title {
-        display: inline-block;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs {
-        list-style: none;
-        padding: 0 0 0 10px;
-        margin: 0 0 1.618em;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li {
-        border: 1px solid #ddd;
-        background-color: #f4f4f4;
-        display: inline-block;
-        position: relative;
-        z-index: 0;
-        margin: 0;
-        padding: 0 1em;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li a {
-        display: inline-block;
-        padding: .5em 0;
-        font-weight: 700;
-        color: #444;
-        text-decoration: none;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li a:hover {
-        text-decoration: none;
-        color: #444;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li.active {
-        background: #fff;
-        z-index: 2;
-        border-bottom-color: #fff;
-        box-shadow: 0 3px 0 #337ab7 inset;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li.active a {
-        color: inherit;
-        text-shadow: inherit;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs::before {
-        position: absolute;
-        content: " ";
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        border-bottom: 1px solid #ddd;
-        z-index: 1;
-    }
-
-    .auto-listings .auto-listings-tabs .panel {
-        margin: 0 0 2em;
-        padding: 0;
-    }
-
-    .auto-listings-single .at-a-glance ul {
-        list-style: outside none none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .auto-listings-single .at-a-glance ul li {
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 36px;
-        width: 100%;
-    }
-
-    .auto-listings-single .at-a-glance ul i {
-        margin: 0 15px 0 0;
-        color: #999;
-    }
-
-    .auto-listings-single .at-a-glance ul i::before {
-        font-size: 24px;
-    }
-
-    .auto-listings-single .contact-form {
-        background: #eee none repeat scroll 0 0;
-        padding: 15px 20px;
-    }
-
-    .auto-listings-single .contact-form>h4 {
-        margin: 0 0 12px;
-    }
-
-    .auto-listings-single .contact-form input:not(.button-primary),
-    .auto-listings-single .contact-form textarea {
-        border: 1px solid #eaeaea;
-        font-size: 14px;
-        margin: 0 0 5px;
-        padding: 8px;
-        width: 100%;
-        color: #888;
-    }
-
-    .auto-listings-single .description {
-        margin-bottom: 30px;
-    }
-
-    .auto-listings .auto-listings-tabs ul.tabs li.active {
-        box-shadow: 0 3px 0 #2a69d0 inset;
-    }
-
-    .auto-listings .price {
-        color: #2a69d0;
-    }
-
     :root {
         --pantone186: #C8102E;
     }
 
-    .single-auto-listing #main {
-        background: #f2f3f4 !important;
-        padding: 0 !important;
-    }
-
-    .single-auto-listing #main .fusion-row {
-        max-width: 100%;
-    }
-
-    .single-auto-listing #main .fusion-row .container {
-        width: 100%;
-        padding: 0;
-    }
-
-    .single-auto-listing #main .fusion-row .container #content {
-        padding-top: 0;
-    }
-
-    .single-auto-listing #main h1.entry-title {
-        font-family: "Open Sans", Arial, Helvetica, sans-serif;
-        margin: 20px 0 30px 0;
-        font-size: 34px;
-        display: block;
-        text-align: center;
-    }
-
-    .listing_detail_row {
-        display: flex;
+    .ggc_autolist_main {
+        /* display: flex; */
         flex-flow: wrap;
     }
 
-    .ald_imagegallery {
-        width: 100%;
-        position: relative;
-    }
-
-    .auto-listings-single img {
-        height: auto;
-        width: 100%;
-    }
-
-    .ald_enquiry {
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
-
-    .auto-listings .cardetail_enquirybox .price {
-        display: none;
-    }
-
-    .cardetail_enquirybox {
-        position: relative;
-        z-index: 2;
-    }
-
-    .listing_detail_botrow {
-        width: 100%;
+    .ggc_autolist_item {
         display: flex;
-        max-width: 1170px;
-        margin: 0 auto;
-    }
-
-    .ldbr_left {
-        width: 65%;
-        background: #fff;
-        box-sizing: border-box;
-        padding: 20px;
-    }
-
-    .ldbr_right {
+        padding-bottom: 15px;
         width: 100%;
-        box-sizing: border-box;
+        flex-flow: column;
+
+
     }
 
-    .auto-listings-single .ldbr_left .description {
-        margin: 0 !important;
+    .ggc_autolist_item:nth-child(2n+2) {
+        margin-right: 0;
     }
 
-    .auto-listings-single .ldbr_left .auto-listings-tabs {
-        display: none;
-    }
-
-    .caroverview_box {
-        background: #fff;
-        padding: 15px;
-    }
-
-    .ald_imgbig {
+    .ggc_alimg {
+        width: 100%;
         position: relative;
+        background: #000;
+
+    }
+
+    .ggc_alimg {
         width: 100%;
-    }
-
-    .cdetailtab_item {
-        display: none;
-    }
-
-    .cdetailtab_item ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .cdetailtab_item ul li {
-        padding: 5px 0;
-        display: flex;
-    }
-
-    .cdetailtab_item ul li label {
-        width: 50%;
-        font-weight: 500;
-    }
-
-    .cdetailtab_item ul li span {
-        font-weight: 300;
-    }
-
-    .cardetail_enquirybox .at-a-glance {
-        display: none;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form {
-        background: none;
-        padding: 0;
-    }
-
-    .cardetail_enquirybox h3 {
-        font-family: "Open Sans", Arial, Helvetica, sans-serif;
-        margin: 0;
-        font-size: 22px;
-        padding: 25px 15px 15px;
-        background: #fff;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form h4 {
-        display: none;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form input {
-        border-radius: 0;
-        border: 0;
-        margin-bottom: 0;
-        padding: 16px 10px 16px 15px;
-        height: auto;
-        background: #fff;
-        font-size: 14px;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form .rwmb-field {
-        margin: 0 0 5px;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form textarea {
-        border: 0;
-        border-radius: 0;
-        padding: 16px 15px;
-        color: #000;
-        font-size: 14px;
-        background: #fff;
-        height: 194px;
-    }
-
-    .auto-listings-single .cardetail_enquirybox .contact-form .rwmb-input {
+        height: 518px;
+        /* or whatever height you want */
         position: relative;
+        overflow: hidden;
     }
 
-    .auto-listings-single .cardetail_enquirybox .contact-form .rwmb-button {
-        margin: 0 auto;
+    .ggc_alimg img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
-        background: black;
-        border-radius: 0;
-        border: 0;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 3px 15px 5px;
-        cursor: pointer;
     }
 
-    .auto-listings-single .cardetail_enquirybox .contact-form .rwmb-button:hover{
-        background: #c50a21;
+
+    .ggc_alimg a {
+        transition: all ease-in-out 0.3s;
+    }
+
+    .ggc_alimg:after {
+        content: '';
+        width: 200px;
+        height: 200px;
+        background: url(/transparent.png) center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        visibility: hidden;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .ggc_aldetail {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        background: #f6f6f6;
+        transition: all ease-in-out 0.3s;
+        height: 200px;
+    }
+
+    .post-content .ggc_aldetail h2 {
+        margin: 5px 0 5px;
+        font-size: 24px;
+        font-weight: 550;
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    }
+
+    .ggcal_detail {
+        padding: 0 0;
+    }
+
+    .ggcal_detail a {
+        text-decoration: underline;
+    }
+
+    .ggc_autolist_item:hover .ggc_alimg:after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ggc_autolist_item:hover .ggc_alimg a {
+        opacity: .5;
+    }
+
+    .ggc_autolist_item:hover .ggc_aldetail {
+        background: #ccc;
+    }
+
+    .sold {
+        position: absolute;
+        background: red;
+        color: #fff;
+        display: inline-block;
+        padding: 1px 10px;
+        top: 15px;
+        left: 15px;
+        line-height: 17px;
+        z-index: 5;
     }
 
     .fusion-header-wrapper {
         z-index: 999 !important;
     }
 
-    .ald_thumbfull .owl-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
-        width: 100%;
+    .available_inventory .ggc_autolist_item[data="Sold"] {
+        display: none !important;
     }
 
-    .ald_thumbfull {
-        display: block;
-        position: relative;
-        width: 100%;
-        max-width: 1170px;
-        margin: 10px auto;
-    }
-
-    .ald_thumbfull .owl-prev {
-        float: left;
-        pointer-events: auto;
-        font-size: 35px;
-        color: var(--pantone186);
-        width: 40px;
-        text-align: center;
-    }
-
-    .ald_thumbfull .owl-next {
-        float: right;
-        pointer-events: auto;
-        font-size: 35px;
-        color: var(--pantone186);
-        text-align: center;
-        width: 40px;
-    }
-
-    @media (max-width:1200px) {
-        .auto-listings-single .cardetail_enquirybox .contact-form textarea {
-            height: 113px;
+    @media (max-width:767px) {
+        .ggc_autolist_item {
+            width: 100%;
+            margin: 0;
         }
 
-        .ald_thumbfull,
-        .full-width.upper.listing_title,
-        .cardetail_enquirybox {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
-
-    @media (max-width:991px) {
-        .ald_thumbfull {
-            padding-top: 10px;
-        }
-
-        .ald_imagegallery {
+        .ggc_aldetail {
             width: 100%;
         }
 
-        .ald_enquiry {
+        .ggc_alimg {
             width: 100%;
-            padding-left: 0;
         }
-
-        .listing_detail_botrow {
-            flex-flow: wrap;
-        }
-
-        .ldbr_left {
-            width: 100%;
-            padding: 0 0 20px;
-            border: 0;
-        }
-
-        .ldbr_right {
-            width: 100%;
-            padding: 0;
-        }
-
-        .single-auto-listing #content {
-            padding-bottom: 0;
-            margin-bottom: 0 !important;
-        }
-    }
-
-    @media (max-width:800px) {
-        .single-auto-listing #main {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-    }
-
-    .owl-carousel,
-    .owl-carousel .owl-item {
-        -webkit-tap-highlight-color: transparent;
-        position: relative;
-    }
-
-    .owl-carousel {
-        display: none;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .owl-carousel .owl-stage {
-        position: relative;
-        -ms-touch-action: pan-Y;
-        -moz-backface-visibility: hidden;
-    }
-
-    .owl-carousel .owl-stage:after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-    }
-
-    .owl-carousel .owl-stage-outer {
-        position: relative;
-        overflow: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
-    }
-
-    .owl-carousel .owl-item {
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-    }
-
-    .owl-carousel .owl-item {
-        min-height: 1px;
-        float: left;
-        -webkit-backface-visibility: hidden;
-        -webkit-touch-callout: none;
-    }
-
-    .owl-carousel .owl-item img {
-        display: block;
-        width: 100%;
-    }
-
-    .owl-carousel.owl-loaded {
-        display: block;
-    }
-
-    .owl-carousel .owl-dot,
-    .owl-carousel .owl-nav .owl-next,
-    .owl-carousel .owl-nav .owl-prev {
-        cursor: pointer;
-        cursor: hand;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .owl-carousel.owl-drag .owl-item {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
     }
 
     * {
@@ -665,9 +248,7 @@ body {
     }
 
     input[type=search],
-    input[type=submit],
-    input[type=text],
-    textarea {
+    input[type=submit] {
         -webkit-appearance: none;
         -webkit-border-radius: 0;
     }
@@ -703,8 +284,7 @@ body {
         text-decoration: none;
     }
 
-    input,
-    textarea {
+    input {
         font-family: var(--body_typography-font-family, inherit);
         vertical-align: middle;
         color: var(--body_typography-color);
@@ -729,27 +309,24 @@ body {
         clear: both;
     }
 
-    .container {
-        overflow: hidden;
-    }
-
     #content {
         width: 71.1702128%;
         float: left;
         min-height: 1px;
     }
 
+    #content.full-width {
+        width: 100%;
+    }
+
     .s {
         float: none;
     }
 
-    input[type=text] {
-        border: 1px solid #d2d2d2;
-        font-size: 13px;
-        color: #747474;
-        padding: 8px 15px;
-        width: 100%;
-        box-sizing: border-box;
+    .post-content p {
+        margin: 0 0 0;
+        font-size: 18px;
+        font-weight: 400;
     }
 
     .fusion-animated {
@@ -933,17 +510,21 @@ body {
         z-index: 100000;
     }
 
+    .post-content p {
+        margin-top: 0;
+
+    }
+
+    .rich-snippet-hidden {
+        display: none;
+    }
+
     .fusion-page-load-link {
         display: none;
     }
 
-    .fusion-disable-outline input,
-    .fusion-disable-outline textarea {
+    .fusion-disable-outline input {
         outline: 0;
-    }
-
-    .single h1.entry-title {
-        margin-top: 0;
     }
 }
 
@@ -1030,6 +611,12 @@ a:hover {
     background-color: #333;
 }
 
+#toTop.fusion-to-top-active {
+    pointer-events: auto;
+    opacity: .9;
+    transition: opacity .4s ease-in-out, background .2s ease-in-out;
+}
+
 .to-top-container #toTop {
     border-radius: var(--totop_border_radius) var(--totop_border_radius) 0 0;
 }
@@ -1039,12 +626,16 @@ a:hover {
 }
 
 .fusion-header-wrapper {
-    position: relative;
+    position: fixed;
     z-index: 10011;
 }
 
 .fusion-header-sticky-height {
     display: none;
+}
+
+.fusion-is-sticky .fusion-header-sticky-height {
+    display: block;
 }
 
 .fusion-header {
@@ -1124,10 +715,41 @@ a:hover {
     cursor: pointer;
 }
 
+.fusion-is-sticky .fusion-logo img {
+    width: auto;
+}
+
+.fusion-is-sticky .fusion-header-v1 .fusion-header {
+    position: fixed;
+    top: 0;
+    z-index: 210;
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 0;
+}
+
+.fusion-is-sticky .fusion-main-menu>ul>li:last-child {
+    padding-right: 0;
+}
+
+.fusion-is-sticky .fusion-main-menu>ul>li>a {
+    color: var(--header_sticky_menu_color);
+}
+
+.fusion-body .fusion-is-sticky.fusion-header-wrapper .fusion-header {
+    background-color: var(--header_sticky_bg_color);
+}
+
 .fusion-mobile-nav-holder {
     display: none;
     clear: both;
     color: #333;
+}
+
+.fusion-is-sticky .fusion-mobile-menu-design-modern .fusion-mobile-nav-holder>ul {
+    max-height: 340px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .fusion-mobile-nav-holder .menu-text {
@@ -1198,6 +820,10 @@ body:not(.fusion-header-layout-v6) .fusion-header {
     -moz-transform: none;
 }
 
+body:not(.fusion-header-layout-v6) .fusion-is-sticky .fusion-main-menu>ul>li>a {
+    font-size: var(--header_sticky_nav_font_size);
+}
+
 .fusion-top-header.menu-text-align-center .fusion-main-menu>ul>li>a {
     justify-content: center;
 }
@@ -1212,8 +838,17 @@ body:not(.fusion-header-layout-v6) .fusion-header {
     padding-bottom: var(--header_padding-bottom);
 }
 
+.avada-header-shadow-no .fusion-is-sticky:after,
+.avada-header-shadow-no .fusion-is-sticky:before {
+    display: none;
+}
+
 .layout-wide-mode.avada-has-header-100-width .fusion-header-wrapper .fusion-row {
     max-width: 100%;
+}
+
+body:not(.avada-menu-highlight-style-background) .fusion-is-sticky .fusion-main-menu>ul>li:not(:last-child) {
+    padding-right: var(--header_sticky_nav_padding);
 }
 
 .fusion-top-header .fusion-header {
@@ -1266,6 +901,22 @@ body:not(.fusion-header-layout-v6) .fusion-main-menu>ul>li>a {
     color: var(--nav_typography-color);
 }
 
+.fusion-is-sticky .fusion-main-menu>ul>li.current-menu-item>a,
+.fusion-is-sticky .fusion-main-menu>ul>li>a:hover {
+    color: var(--menu_hover_first_color);
+}
+
+.fusion-body .fusion-main-menu .current-menu-item>a,
+.fusion-body .fusion-main-menu .current_page_item>a {
+    border-color: var(--menu_hover_first_color);
+    color: var(--menu_hover_first_color);
+}
+
+.fusion-body .fusion-main-menu .current-menu-item:not(.fusion-main-menu-cart)>a:before {
+    border-color: var(--menu_hover_first_color);
+    color: var(--menu_hover_first_color);
+}
+
 .fusion-mobile-menu-icons {
     margin-top: var(--mobile_menu_icons_top_margin);
 }
@@ -1286,6 +937,10 @@ body:not(.mobile-menu-design-flyout) .fusion-mobile-nav-item a {
 }
 
 body:not(.mobile-menu-design-flyout) .fusion-mobile-nav-item a:hover {
+    background-color: var(--mobile_menu_hover_color);
+}
+
+body:not(.mobile-menu-design-flyout) .fusion-mobile-current-nav-item>a {
     background-color: var(--mobile_menu_hover_color);
 }
 
@@ -1325,10 +980,13 @@ body:not(.mobile-menu-design-flyout) .fusion-mobile-nav-item a:hover {
     color: var(--mobile_menu_typography-color);
 }
 
+.fusion-mobile-current-nav-item>a {
+    color: var(--mobile_menu_font_hover_color);
+}
+
 .searchform .fusion-search-form-content .fusion-search-button input[type=submit],
 .searchform .fusion-search-form-content .fusion-search-field input,
-input.s,
-input[type=text] {
+input.s {
     height: var(--form_input_height);
     padding-top: 0;
     padding-bottom: 0;
@@ -1342,17 +1000,13 @@ input[type=text] {
     line-height: var(--form_input_height);
 }
 
-input.s,
-input[type=text],
-textarea {
+input.s {
     background-color: var(--form_bg_color);
     font-size: var(--form_text_size);
     color: var(--form_text_color);
 }
 
-input.s:focus,
-input[type=text]:focus,
-textarea:focus {
+input.s:focus {
     border-color: var(--form_focus_border_color);
 }
 
@@ -1379,9 +1033,7 @@ textarea:focus {
 }
 
 .searchform .fusion-search-form-content .fusion-search-field input,
-input.s,
-input[type=text],
-textarea {
+input.s {
     border-width: var(--form_border_width-top) var(--form_border_width-right) var(--form_border_width-bottom) var(--form_border_width-left);
     border-color: var(--form_border_color);
     border-radius: var(--form_border_radius);
@@ -1402,8 +1054,19 @@ html:not(.avada-has-site-width-percent) .fusion-footer-widget-area {
     padding-right: 30px;
 }
 
+html:not(.avada-has-site-width-percent) #main.width-100 {
+    padding-left: var(--hundredp_padding-fallback_to_zero);
+    padding-right: var(--hundredp_padding-fallback_to_zero);
+}
+
 .fusion-footer.fusion-tb-footer .fusion-footer-widget-area {
     padding: 0;
+}
+
+.width-100 .fusion-fullwidth,
+.width-100 .nonhundred-percent-fullwidth {
+    margin-left: var(--hundredp_padding-hundred_percent_negative_margin);
+    margin-right: var(--hundredp_padding-hundred_percent_negative_margin);
 }
 
 body.awb-no-sidebars #content {
@@ -1415,7 +1078,22 @@ body.awb-no-sidebars #content {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: var(--main_padding-top);
-    padding-bottom: var(--main_padding-bottom);
+    padding-bottom: 15px;
+}
+
+#main.width-100 {
+    padding-left: var(--hundredp_padding-fallback_to_zero);
+    padding-right: var(--hundredp_padding-fallback_to_zero);
+}
+
+html.avada-is-100-percent-template #main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+html.avada-is-100-percent-template #main.width-100 {
+    padding-left: var(--hundredp_padding-fallback_to_zero);
+    padding-right: var(--hundredp_padding-fallback_to_zero);
 }
 
 .layout-wide-mode #wrapper {
@@ -1467,6 +1145,8 @@ body a:before {
     color: var(--link_color);
 }
 
+.fusion-title h1,
+.post-content h1,
 h1 {
     font-family: var(--h1_typography-font-family);
     font-weight: var(--h1_typography-font-weight);
@@ -1476,10 +1156,13 @@ h1 {
     font-style: var(--h1_typography-font-style, normal);
 }
 
+.post-content h1,
 h1 {
     font-size: var(--h1_typography-font-size);
 }
 
+.post-content h1,
+.title h1,
 h1 {
     color: var(--h1_typography-color);
 }
@@ -1489,64 +1172,32 @@ h1 {
     margin-bottom: var(--h1_typography-margin-bottom);
 }
 
-h3 {
-    font-family: var(--h3_typography-font-family);
-    font-weight: var(--h3_typography-font-weight);
-    line-height: var(--h3_typography-line-height);
-    letter-spacing: var(--h3_typography-letter-spacing);
-    text-transform: var(--h3_typography-text-transform);
-    font-style: var(--h3_typography-font-style, normal);
+.post-content h2,
+h2 {
+    font-family: var(--h2_typography-font-family);
+    font-weight: var(--h2_typography-font-weight);
+    line-height: var(--h2_typography-line-height);
+    letter-spacing: var(--h2_typography-letter-spacing);
+    text-transform: var(--h2_typography-text-transform);
+    font-style: var(--h2_typography-font-style, normal);
 }
 
-h3 {
-    font-size: var(--h3_typography-font-size);
+.post-content h2,
+h2 {
+    font-size: var(--h2_typography-font-size);
 }
 
-h3 {
-    color: var(--h3_typography-color);
+h2 {
+    color: var(--h2_typography-color);
 }
 
-h3 {
-    margin-top: var(--h3_typography-margin-top);
-    margin-bottom: var(--h3_typography-margin-bottom);
-}
-
-h4,
-table th {
-    font-family: var(--h4_typography-font-family);
-    font-weight: var(--h4_typography-font-weight);
-    line-height: var(--h4_typography-line-height);
-    letter-spacing: var(--h4_typography-letter-spacing);
-    text-transform: var(--h4_typography-text-transform);
-    font-style: var(--h4_typography-font-style, normal);
-}
-
-h4 {
-    line-height: var(--h4_typography-line-height);
-}
-
-h4 {
-    font-size: var(--h4_typography-font-size);
-}
-
-h4 {
-    color: var(--h4_typography-color);
-}
-
-h4 {
-    margin-top: var(--h4_typography-margin-top);
-    margin-bottom: var(--h4_typography-margin-bottom);
+h2 {
+    margin-top: var(--h2_typography-margin-top);
+    margin-bottom: var(--h2_typography-margin-bottom);
 }
 
 .fusion-search-form-clean .searchform:not(.fusion-search-form-classic) .fusion-search-form-content .fusion-search-field input {
     padding-left: var(--form_input_height);
-}
-
-.table,
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-tr td {
-    border-color: var(--sep_color);
 }
 
 :root {
@@ -1730,9 +1381,9 @@ tr td {
     --footer_text_color: hsla(var(--awb-color1-h), var(--awb-color1-s), var(--awb-color1-l), calc(var(--awb-color1-a) - 40%));
     --bg_image: none;
     --bg_repeat: no-repeat;
-    --bg_color: var(--awb-color3);
+    --bg_color: #f2f3f4;
     --bg-color-overlay: normal;
-    --bg_pattern: url("https://ggclassiccars.com/wp-content/themes/Avada/assets/images/patterns/pattern1.png");
+    --bg_pattern: url("/pattern1.png");
     --content_bg_color: var(--awb-color1);
     --content_bg_image: none;
     --content_bg_repeat: no-repeat;
@@ -2179,29 +1830,6 @@ body {
     --fusion-video-max-width-default: 100%;
 }
 
-.fa {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-}
-
-.fa {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-
-.fa-chevron-left:before {
-    content: "\f053";
-}
-
-.fa-chevron-right:before {
-    content: "\f054";
-}
-
 .button-default,
 .fusion-button,
 .fusion-button-default {
@@ -2363,42 +1991,6 @@ body {
     box-shadow: none !important;
 }
 
-table {
-    max-width: 100%;
-    background-color: transparent;
-}
-
-.table {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.table>tbody>tr>td,
-.table>tbody>tr>th {
-    padding: 8px;
-    line-height: 1.53846154;
-    vertical-align: top;
-    border-top: 1px solid #e5e4e3;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.table {
-    border-color: #e5e4e3;
-}
-
-.table>tbody>tr>th {
-    padding: 20px;
-    font-weight: 700;
-}
-
-.table>tbody>tr>td {
-    padding: 10px 20px;
-}
-
 .fusion-text {
     --awb-content-alignment: initial;
     --awb-font-size: inherit;
@@ -2429,21 +2021,67 @@ table {
     margin: var(--awb-margin-top) var(--awb-margin-right) var(--awb-margin-bottom) var(--awb-margin-left);
 }
 
-.clearfix,
-.container {
+.fusion-body .fusion-title {
+    --awb-highlight-color: var(--primary_color, #65bc7b);
+    --awb-highlight-top-margin: 0;
+    --awb-highlight-width: 9;
+    --awb-text-color: var(--body_typography-color);
+    --awb-margin-top: var(--title_margin-top);
+    --awb-margin-right: var(--title_margin-right);
+    --awb-margin-bottom: var(--title_margin-bottom);
+    --awb-margin-left: var(--title_margin-left);
+    --awb-link-color: var(--link_color);
+    --awb-link-hover-color: var(--link_hover_color);
+    --awb-sep-color: var(--title_border_color);
+    --awb-font-size: var(--body_typography-font-size);
+    margin-top: var(--awb-margin-top);
+    margin-right: var(--awb-margin-right);
+    margin-bottom: var(--awb-margin-bottom);
+    margin-left: var(--awb-margin-left);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom-color: var(--awb-sep-color);
+    font-size: var(--awb-font-size);
+}
+
+.fusion-body .fusion-title.fusion-title-size-one {
+    --awb-font-size: var(--h1_typography-font-size);
+    --awb-text-color: var(--h1_typography-color);
+}
+
+.fusion-body .fusion-title.fusion-title-center {
+    text-align: center;
+}
+
+.fusion-body .fusion-title.fusion-title-center.fusion-sep-none .title-heading-center {
+    padding: 0;
+    text-align: center;
+}
+
+.fusion-body .fusion-title.fusion-sep-none {
+    display: block;
+}
+
+.fusion-body #wrapper .fusion-title h1 {
+    flex-grow: 0;
+    padding: 0;
+    font-size: 1em;
+    color: var(--awb-text-color);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.clearfix {
     clear: both;
 }
 
 .clearfix,
-.container,
 .fusion-clearfix {
     clear: both;
 }
 
 .clearfix:after,
 .clearfix:before,
-.container:after,
-.container:before,
 .fusion-clearfix:after,
 .fusion-clearfix:before {
     content: " ";
@@ -2451,7 +2089,6 @@ table {
 }
 
 .clearfix:after,
-.container:after,
 .fusion-clearfix:after {
     clear: both;
 }
@@ -2478,31 +2115,6 @@ table {
 .fusion-fullwidth .fusion-row {
     position: relative;
     z-index: 10;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media (min-width:0px) {
-    .container {
-        width: 750px;
-    }
-}
-
-@media (min-width:992px) {
-    .container {
-        width: 970px;
-    }
-}
-
-@media (min-width:1200px) {
-    .container {
-        width: 1170px;
-    }
 }
 
 .fusion-fullwidth {
@@ -2562,7 +2174,8 @@ table {
     filter: var(--awb-filter-hover);
 }
 
-.fusion-tb-footer .fusion-fullwidth {
+.fusion-tb-footer .fusion-fullwidth,
+.width-100 .fusion-fullwidth {
     --awb-padding-top: var(--container_padding_100_top, 0px);
     --awb-padding-right: var(--container_padding_100_right, var(--hundredp_padding));
     --awb-padding-bottom: var(--container_padding_100_bottom, 0px);
@@ -2573,6 +2186,12 @@ table {
     max-width: none !important;
 }
 
+#wrapper #main .fullwidth-box .fusion-row {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.post-content:not(.fusion-post-content),
 body:not(.side-header) #wrapper {
     position: relative;
 }
@@ -2614,6 +2233,10 @@ body:not(.side-header) #wrapper {
 
 .fusion-flex-container .fusion-row .fusion-flex-column .fusion-column-wrapper:not(.fusion-flex-column-wrapper-legacy).fusion-content-layout-column {
     flex-direction: column;
+}
+
+.fusion-flex-container .fusion-flex-align-items-flex-start {
+    align-items: flex-start;
 }
 
 .fusion-flex-container .fusion-flex-align-items-center {
@@ -2836,6 +2459,32 @@ body:not(.fusion-builder-live-preview) .fusion-column-wrapper:hover>.fusion-buil
 }
 
 @media only screen and (max-width: 1024px) {
+    .fusion-title {
+        --awb-margin-top-medium: var(--awb-margin-top);
+        --awb-margin-right-medium: var(--awb-margin-right);
+        --awb-margin-bottom-medium: var(--awb-margin-bottom);
+        --awb-margin-left-medium: var(--awb-margin-left);
+        margin-top: var(--awb-margin-top-medium) !important;
+        margin-right: var(--awb-margin-right-medium) !important;
+        margin-bottom: var(--awb-margin-bottom-medium) !important;
+        margin-left: var(--awb-margin-left-medium) !important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .fusion-title {
+        --awb-margin-top-small: var(--title_margin_mobile-top, var(--awb-margin-top-medium));
+        --awb-margin-right-small: var(--title_margin_mobile-right, var(--awb-margin-right-medium));
+        --awb-margin-bottom-small: var(--title_margin_mobile-bottom, var(--awb-margin-bottom-medium));
+        --awb-margin-left-small: var(--title_margin_mobile-left, var(--awb-margin-left-medium));
+        margin-top: var(--awb-margin-top-small) !important;
+        margin-right: var(--awb-margin-right-small) !important;
+        margin-bottom: var(--awb-margin-bottom-small) !important;
+        margin-left: var(--awb-margin-left-small) !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
 
     .fusion_builder_column,
     .fusion_builder_column_inner {
@@ -3013,6 +2662,10 @@ body:not(.fusion-builder-live-preview) .fusion-column-wrapper:hover>.fusion-buil
         width: auto !important;
     }
 
+    #content.full-width {
+        margin-bottom: 0;
+    }
+
     .fullwidth-box {
         background-attachment: scroll !important;
     }
@@ -3082,105 +2735,86 @@ body:not(.fusion-builder-live-preview) .fusion-column-wrapper:hover>.fusion-buil
         margin-left: 0 !important;
         margin-bottom: 50px;
     }
-}
 
-.auto-listings-single .contact-form input:not(.button-primary),
-.auto-listings-single .cardetail_enquirybox .contact-form textarea {
-    color: #333 !important;
-}
-
-.auto-listings-single .contact-form input::placeholder,
-.auto-listings-single .cardetail_enquirybox .contact-form textarea::placeholder {
-    color: #666 !important;
-}
-
-.auto-listings-single .cardetail_enquirybox .contact-form .rwmb-button {
-    font-size: 20px;
-    padding: 15px 15px 15px;
+    #content.full-width {
+        margin-bottom: 0;
+    }
 }
 
 .fusion-builder-row.fusion-row {
     max-width: var(--site_width);
 }
 
-/*! CSS Used from: Embedded */
-.rwmb-field {
-    display: flex;
-}
-
-.rwmb-field:not(:last-of-type) {
-    margin: 0 0 12px;
-}
-
-.rwmb-input {
-    flex: 1;
-}
-
-.rwmb-input input:not([size]),
-.rwmb-input textarea:not([cols]) {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.rwmb-input input:not([type="checkbox"]):not([type="radio"]),
-.rwmb-input textarea {
-    max-width: 100%;
-    margin-inline: 0;
-}
-
-.rwmb-textarea {
-    resize: vertical;
-}
-
-@media (max-width: 782px) {
-    .rwmb-field {
-        flex-direction: column;
-    }
-}
-
-/*! CSS Used from: https://ggclassiccars.com/wp-content/cache/wpo-minify/1749249567/assets/wpo-minify-footer-7b0f153d.min.css ; media=all */
-@media all {
-    .rwmb-button {
-        margin: 10px 10px 0 0;
-    }
-}
-
 /*! CSS Used fontfaces */
 @font-face {
-    font-family: "autolistings";
-    src: url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.eot);
-    src: url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.eot#1749249567) format("embedded-opentype"), url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.woff) format("woff"), url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.ttf) format("truetype"), url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.svg#icons) format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "autolistings";
-    src: url(https://ggclassiccars.com/wp-content/plugins/auto-listings/assets/fonts/icons.svg#icons) format("svg");
-}
-
-@font-face {
     font-family: "awb-icons";
-    src: url('https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/icomoon/awb-icons.woff') format('woff'), url('https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/icomoon/awb-icons.ttf') format('truetype'), url('https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/icomoon/awb-icons.svg#awb-icons') format('svg');
+    src: url('/awb-icons.woff') format('woff'), url('/awb-icons.ttf') format('truetype'), url('/awb-icons.svg#awb-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-@font-face {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.eot);
-    src: url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.woff2) format("woff2"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.woff) format("woff"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.ttf) format("truetype"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-regular-400.svg#fontawesome) format("svg");
-    font-display: block;
+a:hover .ggc_aldetail,
+a:hover .ggc_aldetail * {
+    color: black !important;
+    text-decoration: none !important;
 }
 
-@font-face {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 900;
-    src: url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.eot);
-    src: url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.woff) format("woff"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.ttf) format("truetype"), url(https://ggclassiccars.com/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-solid-900.svg#fontawesome) format("svg");
-    font-display: block;
+a:hover .ggc_aldetail_title {
+    color: #c50a21 !important;
+}
+
+/* Responsive for Tablets */
+@media (max-width: 1024px) {
+
+
+    .ggc_aldetail_title {
+        font-size: 22px;
+    }
+
+    .ggcal_detail p {
+        font-size: 14px;
+    }
+}
+
+/* Responsive for Mobiles */
+@media (max-width: 768px) {
+    .ggc_alimg {
+        height: 300px;
+    }
+
+    .ggc_alimg img {
+        max-height: 300px;
+    }
+
+    .ggc_aldetail_title {
+        font-size: 18px;
+    }
+
+    .ggcal_detail p {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .ggc_alimg {
+        height: 220px;
+    }
+
+    .ggc_alimg img {
+        max-height: 220px;
+    }
+
+    .ggc_aldetail_title {
+        font-size: 16px;
+    }
+
+    .ggcal_detail p {
+        font-size: 12px;
+    }
+
+    .ggc_autolist_main {
+        margin-top: 30px;
+    }
 }

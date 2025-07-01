@@ -1,11 +1,12 @@
-<html class="avada-html-layout-wide avada-html-header-position-top ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-137 ua-chrome-137-0 ua-chrome-137-0-0 ua-chrome-137-0-0-0 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js touchevents no-applicationcache audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a canvas canvastext hashchange geolocation history inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color postmessage postmessage-structuredclones video no-video-ogg video-h264 no-video-h265 video-webm video-vp9 no-video-hls no-video-av1 webgl websockets cssanimations backgroundsize borderimage borderradius boxshadow flexbox fontface generatedcontent cssgradients hsla multiplebgs opacity cssreflections rgba textshadow csstransforms supports csstransforms3d csstransitions localstorage sessionstorage no-websqldatabase svgclippaths inlinesvg smil webworkers" lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
+<html lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="max-image-preview:large">
-    <link rel="stylesheet" href="{{ asset('frontend/blog/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/blog.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/global.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>TIM International</title>
@@ -18,15 +19,12 @@
         <div id="wrapper" class="fusion-wrapper">
             <div id="home" style="position:relative;top:-1px;"></div>
 
-
             @include('frontend.header')
 
             <main id="main" class="clearfix ">
                 <div class="fusion-row" style="margin-top: 100px">
 
                     <section id="content">
-
-
                         <article id="post-1913" class="post post-1913 type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                             <h1 class="entry-title fusion-post-title">{{ $blog->title }}</h1>
                             <div class="fusion-flexslider flexslider fusion-flexslider-loading post-slideshow fusion-post-slideshow">
@@ -36,15 +34,12 @@
                                             <span class="screen-reader-text">View Larger Image</span>
                                             <img width="2500" height="1667" src="{{ asset('storage/'.$blog->image) }}" class="attachment-full size-full wp-post-image " alt="" decoding="async" fetchpriority="high" sizes="(max-width: 640px) 100vw, 2500px"> </a>
                                     </li>
-
                                 </ul>
                             </div>
-
                             <div class="post-content">
-                            {!! $blog->description !!}
-
+                              {!! $blog->description !!}
                             </div>
-                            <span class="vcard rich-snippet-hidden"><span class="fn"><a href="https://ggclassiccars.com/author/trpagency/" title="Posts by trpagency" rel="author">trpagency</a></span></span><span class="updated rich-snippet-hidden">2024-02-25T11:29:01+00:00</span>
+                            <span class="vcard rich-snippet-hidden"><span class="fn"><a href="#" title="Posts by trpagency" rel="author">trpagency</a></span></span><span class="updated rich-snippet-hidden">2024-02-25T11:29:01+00:00</span>
                         </article>
                         <div class="single-navigation clearfix">
                             @if($previous)
@@ -55,7 +50,6 @@
                                 Previous
                             </a>
                             @endif
-
                             @if($next)
                             <a href="{{ route('blog.detail', $next->id) }}" style="font-weight: bold;" rel="next">
                                 Next
@@ -65,8 +59,6 @@
                             </a>
                             @endif
                         </div>
-
-
                     </section>
                 </div>
             </main>
@@ -75,7 +67,7 @@
 
         </div>
     </div>
-
+    <script  src="{{ asset('frontend/js/global.js') }}"></script>
 
 </body>
 

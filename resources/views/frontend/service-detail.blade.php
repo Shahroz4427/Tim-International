@@ -1,22 +1,15 @@
-<html
-    class="avada-html-layout-wide avada-html-header-position-top ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-137 ua-chrome-137-0 ua-chrome-137-0-0 ua-chrome-137-0-0-0 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js touchevents no-applicationcache audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a canvas canvastext hashchange geolocation history inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color postmessage postmessage-structuredclones video no-video-ogg video-h264 no-video-h265 video-webm video-vp9 no-video-hls no-video-av1 webgl websockets cssanimations backgroundsize borderimage borderradius boxshadow flexbox fontface generatedcontent cssgradients hsla multiplebgs opacity cssreflections rgba textshadow csstransforms supports csstransforms3d csstransitions localstorage sessionstorage no-websqldatabase svgclippaths inlinesvg smil webworkers"
-    lang="en-AU"
-    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
-    data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
+<html lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="max-image-preview:large" />
-    <link rel="stylesheet" href="{{ asset('frontend/servicedetail/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/servicedetail.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/global.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        p {
-            font-size: 16px;
-        }
-    </style>
+
     <title>TIM INTERNATIONAL</title>
 </head>
 
@@ -100,62 +93,14 @@
                                         <div class="ldbr_right">
                                             <div class="ald_enquiry">
                                                 <div class="cardetail_enquirybox">
-                                                    {{-- Success Message --}}
-                                                    @if(session('success'))
-                                                    <style>
-                                                        .custom-toast {
-                                                            background-color: #02a038;
-                                                            color: #fff;
-                                                            padding: 12px 20px;
-                                                            border-radius: 5px;
-                                                            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-                                                            margin-bottom: 1rem;
-                                                            opacity: 1;
-                                                            transition: opacity 0.5s ease-in-out;
-                                                            display: inline-block;
-                                                            width: 100%;
-                                                        }
-
-                                                        .custom-toast.fade-out {
-                                                            opacity: 0;
-                                                        }
-                                                    </style>
-
-                                                    <div id="custom-toast" class="custom-toast">
-                                                        {{ session('success') }}
-                                                    </div>
-
-                                                    <script>
-                                                        const toast = document.getElementById('custom-toast');
-
-                                                        // Scroll to the toast
-                                                        toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                                                        // Start fade-out after 2.5 seconds
-                                                        setTimeout(() => {
-                                                            toast.classList.add('fade-out');
-                                                        }, 5000);
-
-                                                        // Remove from DOM after transition ends
-                                                        setTimeout(() => {
-                                                            toast.remove();
-                                                        }, 6000);
-                                                    </script>
-                                                    @endif
-
-                                                    {{-- Error Messages --}}
-                                                    @if($errors->any())
-                                                    <ul style="color: red; text-align:center;">
-                                                        @foreach($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                    @endif
+                                                    <!-- Message box -->
+                                                    <div id="serviceFormMessage" style="margin-bottom: 20px;"></div>
                                                     <h3>ENQUIRY</h3>
 
                                                     <div class="contact-form">
                                                         <h4>Quick Contact</h4>
-                                                        <form action="{{ route('service.inquiry.submit') }}" method="POST" onsubmit="return validateInquiryForm()">
+                                                        <form id="serviceInquiryForm">
+                                                                                                                
                                                             @csrf
                                                             <input type="hidden" name="service" value="{{ $service->name }}">
 
@@ -199,7 +144,20 @@
             @include('frontend.footer')
         </div>
     </div>
+    <script  src="{{ asset('frontend/js/global.js') }}"></script>
     <script>
+        function showInquiryMessage(msg, type = 'success') {
+            const messageBox = document.getElementById('serviceFormMessage');
+            const div = document.createElement('div');
+            div.className = type === 'error' ? 'custom-error' : 'custom-toast';
+            div.textContent = msg;
+            messageBox.innerHTML = ''; // Clear old messages
+            messageBox.appendChild(div);
+
+            setTimeout(() => div.classList.add('fade-out'), 5000);
+            setTimeout(() => div.remove(), 6000);
+        }
+
         function validateInquiryForm() {
             const name = document.getElementById('inq_name').value.trim();
             const email = document.getElementById('inq_email').value.trim();
@@ -207,22 +165,56 @@
             const message = document.getElementById('inq_message').value.trim();
 
             if (!name || !email || !phone || !message) {
-                alert('Please fill in all fields.');
+                showInquiryMessage('Please fill in all required fields.', 'error');
                 return false;
             }
 
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
             if (!email.match(emailPattern)) {
-                alert('Please enter a valid email.');
-                return false;
-            }
-
-            if (phone.length < 7) {
-                alert('Please enter a valid phone number.');
+                showInquiryMessage('Please enter a valid email address.', 'error');
                 return false;
             }
 
             return true;
+        }
+
+        document.getElementById('serviceInquiryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!validateInquiryForm()) return;
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("{{ route('service.inquiry.submit') }}", {
+                    method: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    },
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showInquiryMessage(result.message || 'Thank you! We have received your inquiry.', 'success');
+                    form.reset();
+                } else {
+                    handleInquiryErrors(result);
+                }
+            } catch (error) {
+                showInquiryMessage('An unexpected error occurred.', 'error');
+            }
+        });
+
+        function handleInquiryErrors(result) {
+            if (result.errors) {
+                const firstError = Object.values(result.errors)[0][0];
+                showInquiryMessage(firstError, 'error');
+            } else {
+                showInquiryMessage(result.message || 'Submission failed.', 'error');
+            }
         }
     </script>
 

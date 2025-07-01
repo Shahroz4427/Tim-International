@@ -1,14 +1,12 @@
-<html
-    class="avada-html-layout-wide avada-html-header-position-top avada-is-100-percent-template ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-137 ua-chrome-137-0 ua-chrome-137-0-0 ua-chrome-137-0-0-0 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js touchevents no-applicationcache audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a canvas canvastext hashchange geolocation history inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color postmessage postmessage-structuredclones video no-video-ogg video-h264 no-video-h265 video-webm video-vp9 no-video-hls no-video-av1 webgl websockets cssanimations backgroundsize borderimage borderradius boxshadow flexbox fontface generatedcontent cssgradients hsla multiplebgs opacity cssreflections rgba textshadow csstransforms supports csstransforms3d csstransitions localstorage sessionstorage no-websqldatabase svgclippaths inlinesvg smil webworkers"
-    lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
-    data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
+<html lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="max-image-preview:large">
-    <link rel="stylesheet" href="{{ asset('frontend/inventory/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/global.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/inventory.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>TIM INTERNATIONAL</title>
@@ -28,7 +26,7 @@
                         <div id="post-9" class="post-9 page type-page status-publish hentry">
                             <span class="entry-title rich-snippet-hidden">Inventory</span><span
                                 class="vcard rich-snippet-hidden"><span class="fn"><a
-                                        href="https://ggclassiccars.com/author/bvncreative/" title="Posts by admin"
+                                        href="#" title="Posts by admin"
                                         rel="author">admin</a></span></span><span
                                 class="updated rich-snippet-hidden">2025-02-02T09:37:46+00:00</span>
                             <div class="post-content">
@@ -51,71 +49,6 @@
                                                         <strong>Inventory</strong>
                                                     </h1>
                                                 </div>
-
-                                                <style>
-                                                    a:hover .ggc_aldetail,
-                                                    a:hover .ggc_aldetail * {
-                                                        color: black !important;
-                                                        text-decoration: none !important;
-                                                    }
-
-                                                    a:hover .ggc_aldetail_title {
-                                                        color: #c50a21 !important;
-                                                    }
-
-                                                    /* Responsive for Tablets */
-                                                    @media (max-width: 1024px) {
-                                                     
-
-                                                        .ggc_aldetail_title {
-                                                            font-size: 22px;
-                                                        }
-
-                                                        .ggcal_detail p {
-                                                            font-size: 14px;
-                                                        }
-                                                    }
-
-                                                    /* Responsive for Mobiles */
-                                                    @media (max-width: 768px) {
-                                                        .ggc_alimg{
-                                                         height: 300px;
-                                                        }
-                                                        .ggc_alimg img {
-                                                            max-height: 300px;
-                                                        }
-
-                                                        .ggc_aldetail_title {
-                                                            font-size: 18px;
-                                                        }
-
-                                                        .ggcal_detail p {
-                                                            font-size: 13px;
-                                                        }
-                                                    }
-
-                                                    /* Small mobile devices */
-                                                    @media (max-width: 480px) {
-                                                        .ggc_alimg{
-                                                         height: 220px;
-                                                        }
-                                                        .ggc_alimg img {
-                                                            max-height: 220px;
-                                                        }
-
-                                                        .ggc_aldetail_title {
-                                                            font-size: 16px;
-                                                        }
-
-                                                        .ggcal_detail p {
-                                                            font-size: 12px;
-                                                        }
-                                                        .ggc_autolist_main{
-                                                            margin-top: 30px;
-                                                        }
-                                                    }
-                                                </style>
-
                                                 <div class="ggc_autolist_main" id="listings-container" >
                                                     @if($cars->isEmpty())
                                                     <div style="min-height: 60vh; display: flex; justify-content: center; align-items: center; width: 100%;">
@@ -140,15 +73,6 @@
                                                                 <div class="clear"></div>
 
                                                                 <div class="ggcal_detail">
-                                                                    <style>
-                                                                        span {
-                                                                            background-color: transparent !important;
-                                                                        }
-
-                                                                        strong {
-                                                                            background-color: transparent !important;
-                                                                        }
-                                                                    </style>
                                                                     <p>
                                                                         {!! $car->description ?? 'No description available.' !!}
                                                                     </p>
@@ -172,7 +96,7 @@
             @include('frontend.footer')
         </div>
     </div>
-
+    <script  src="{{ asset('frontend/js/global.js') }}"></script>
 </body>
 
 </html>

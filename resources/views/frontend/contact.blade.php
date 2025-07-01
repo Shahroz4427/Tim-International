@@ -1,31 +1,13 @@
-<html
-    class="avada-html-layout-wide avada-html-header-position-top avada-is-100-percent-template ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-137 ua-chrome-137-0 ua-chrome-137-0-0 ua-chrome-137-0-0-0 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js touchevents no-applicationcache audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a canvas canvastext hashchange geolocation history inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color postmessage postmessage-structuredclones video no-video-ogg video-h264 no-video-h265 video-webm video-vp9 no-video-hls no-video-av1 webgl websockets cssanimations backgroundsize borderimage borderradius boxshadow flexbox fontface generatedcontent cssgradients hsla multiplebgs opacity cssreflections rgba textshadow csstransforms supports csstransforms3d csstransitions localstorage sessionstorage no-websqldatabase svgclippaths inlinesvg smil webworkers"
-    lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
-    data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36">
-
+<html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="robots" content="max-image-preview:large">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('frontend/contact/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/contact.css') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/global.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .banner-container {
-            margin-top: 100px;
-            height: 650px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        @media(max-width:480px) {
-            .banner-container {
-                height: 300px;
-            }
-        }
-    </style>
     <title>TIM INTERNATIONAL</title>
 </head>
 
@@ -34,21 +16,17 @@
     data-awb-post-id="182" style="--viewportWidth: 1366;" cz-shortcut-listen="true">
 
     <div id="boxed-wrapper">
-
         <div id="wrapper" class="fusion-wrapper">
             @include('frontend.header')
-
-            <section class="banner-container" style=" background-image: url({{ asset('frontend/contact/images/banner.webp') }})">
+            <section class="banner-container" style=" background-image: url({{ asset('frontend/images/contactbanner.webp') }})">
             </section>
-
-
             <main id="main" class="clearfix width-100">
                 <div class="fusion-row" style="max-width:100%; ">
                     <section id="content" class="full-width">
                         <div id="post-182" class="post-182 page type-page status-publish hentry">
                             <span class="entry-title rich-snippet-hidden">Contact Us</span><span
                                 class="vcard rich-snippet-hidden"><span class="fn"><a
-                                        href="https://ggclassiccars.com/author/bvncreative/" title="Posts by admin"
+                                        href="#" title="Posts by admin"
                                         rel="author">admin</a></span></span><span
                                 class="updated rich-snippet-hidden">2023-09-05T08:05:50+00:00</span>
                             <div class="post-content">
@@ -66,60 +44,9 @@
                                                         text ever since the 1500s, when an unknown printer took a galley
                                                         of type and scrambled it to make a type specimen book.</p>
                                                 </div>
-                                                <div style="display: flex;">
-                                                    @if(session('success'))
-                                                    <style>
-                                                        .custom-toast {
-                                                            background-color: #02a038;
-                                                            color: #fff;
-                                                            padding: 12px 20px;
-                                                            border-radius: 5px;
-                                                            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-                                                            margin-bottom: 1rem;
-                                                            opacity: 1;
-                                                            transition: opacity 0.5s ease-in-out;
-                                                            display: inline-block;
-                                                            width: 100%;
-                                                        }
+                                                <div id="formMessage_1" style="margin-bottom: 20px;"></div>
+                                                <div id="formMessage_2" style="margin-bottom: 20px;"></div>
 
-                                                        .custom-toast.fade-out {
-                                                            opacity: 0;
-                                                        }
-                                                    </style>
-
-                                                    <div id="custom-toast" class="custom-toast">
-                                                        {{ session('success') }}
-                                                    </div>
-
-                                                    <script>
-                                                        const toast = document.getElementById('custom-toast');
-
-                                                        // Scroll to the toast
-                                                        toast.scrollIntoView({
-                                                            behavior: 'smooth',
-                                                            block: 'center'
-                                                        });
-
-                                                        // Start fade-out after 2.5 seconds
-                                                        setTimeout(() => {
-                                                            toast.classList.add('fade-out');
-                                                        }, 5000);
-
-                                                        // Remove from DOM after transition ends
-                                                        setTimeout(() => {
-                                                            toast.remove();
-                                                        }, 6000);
-                                                    </script>
-                                                    @endif
-
-                                                    @if($errors->any())
-                                                    <ul style="color: red; text-align:center;">
-                                                        @foreach($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                    @endif
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="fusion-layout-column fusion_builder_column fusion-builder-column-1 fusion_builder_column_3_5 3_5 fusion-flex-column fusion-flex-align-self-stretch"
@@ -136,8 +63,7 @@
                                                                 class="gfield_required gfield_required_asterisk">*</span>"
                                                             indicates required fields</p>
                                                     </div>
-                                                    <form method="POST" action="{{ route('enquiry.submit') }}" enctype="multipart/form-data" id="gform_1" novalidate>
-                                                        @csrf
+                                                    <form id="gform_1">
                                                         <div class="gform-body gform_body">
                                                             <div id="gform_fields_1" class="gform_fields top_label form_sublabel_below description_below validation_below">
                                                                 <div id="field_1_1" class="gfield gfield--type-text gfield--width-half gfield_contains_required field_sublabel_below gfield_visibility_visible">
@@ -187,13 +113,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <style>
-                                            @media(max-width:480px) {
-                                                .p-30 {
-                                                    padding-top: 30px;
-                                                }
-                                            }
-                                        </style>
+
                                         <div class="fusion-layout-column fusion_builder_column fusion-builder-column-2 fusion_builder_column_2_5 2_5 fusion-flex-column fusion-flex-align-self-stretch p-30"
                                             style="--awb-padding-bottom:0px;--awb-padding-left:0px;--awb-bg-size:cover;--awb-border-color:var(--awb-color3);--awb-border-left:0px;--awb-border-style:solid;--awb-width-large:40%;--awb-margin-top-large:0px;--awb-spacing-right-large:4.8%;--awb-margin-bottom-large:0px;--awb-spacing-left-large:4.8%;--awb-width-medium:40%;--awb-order-medium:0;--awb-spacing-right-medium:4.8%;--awb-spacing-left-medium:4.8%;--awb-width-small:100%;--awb-order-small:0;--awb-spacing-right-small:1.92%;--awb-spacing-left-small:1.92%;">
                                             <div
@@ -208,8 +128,7 @@
                                                                 class="gfield_required gfield_required_asterisk">*</span>"
                                                             indicates required fields</p>
                                                     </div>
-                                                    <form method="POST" action="{{ route('inquiry.submit') }}" enctype="multipart/form-data" id="gform_2" novalidate>
-                                                        @csrf
+                                                    <form  id="gform_2">
                                                         <div class="gform-body gform_body">
                                                             <div id="gform_fields_2" class="gform_fields top_label form_sublabel_below description_below validation_below">
                                                                 <div id="field_2_1" class="gfield gfield--type-text gfield--width-full gfield_contains_required gfield_visibility_visible">
@@ -283,6 +202,7 @@
     </div>
 
     </div>
+    <script  src="{{ asset('frontend/js/global.js') }}"></script>
     <script>
         document.getElementById('gform_1').addEventListener('submit', function(e) {
             const requiredFields = ['input_1_1', 'input_1_3', 'input_1_4', 'input_1_6'];
@@ -304,33 +224,130 @@
             }
         });
 
-        function validateForm() {
-            const firstName = document.getElementById('first_name').value.trim();
-            const lastName = document.getElementById('last_name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const interests = document.querySelectorAll('input[name="interest[]"]:checked');
+        function showFormMessage(formId, msg, type = 'success') {
+            const messageBox = document.getElementById('formMessage_' + formId);
+            const div = document.createElement('div');
+            div.className = type === 'error' ? 'custom-error' : 'custom-toast';
+            div.textContent = msg;
+            messageBox.innerHTML = '';
+            messageBox.appendChild(div);
 
-            if (!firstName || !lastName || !email) {
-                alert('Please fill in all required fields.');
+            setTimeout(() => div.classList.add('fade-out'), 5000);
+            setTimeout(() => div.remove(), 6000);
+        }
+
+        function validateEmail(email) {
+            const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            return pattern.test(email);
+        }
+
+     
+        function validateGForm1() {
+            const firstName = document.getElementById('input_1_1').value.trim();
+            const lastName = document.getElementById('input_1_3').value.trim();
+            const email = document.getElementById('input_1_4').value.trim();
+            const phone = document.getElementById('input_1_5').value.trim();
+            const message = document.getElementById('input_1_6').value.trim();
+
+            if (!firstName || !lastName || !email || !phone || !message) {
+                showFormMessage('1', 'Please fill in all required fields.', 'error');
                 return false;
             }
-
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-            if (!email.match(emailPattern)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            if (interests.length === 0) {
-                alert('Please select at least one interest.');
+            if (!validateEmail(email)) {
+                showFormMessage('1', 'Please enter a valid email address.', 'error');
                 return false;
             }
 
             return true;
         }
+
+     
+        function validateGForm2() {
+            const firstName = document.getElementById('input_2_1').value.trim();
+            const lastName = document.getElementById('input_2_3').value.trim();
+            const email = document.getElementById('input_2_4').value.trim();
+            const interests = document.querySelectorAll('input[name="interest[]"]:checked');
+
+            if (!firstName || !lastName || !email) {
+                showFormMessage('2', 'Please fill in all required fields.', 'error');
+                return false;
+            }
+            if (!validateEmail(email)) {
+                showFormMessage('2', 'Please enter a valid email address.', 'error');
+                return false;
+            }
+            if (interests.length === 0) {
+                showFormMessage('2', 'Please select at least one interest.', 'error');
+                return false;
+            }
+
+            return true;
+        }
+
+
+        document.getElementById('gform_1').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (!validateGForm1()) return;
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("{{ route('enquiry.submit') }}", {
+                    method: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    },
+                    body: formData
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    showFormMessage('1', result.message || 'Submitted successfully.', 'success');
+                    form.reset();
+                } else {
+                    handleServerErrors(result, '1');
+                }
+            } catch (error) {
+                showFormMessage('1', 'Unexpected error occurred.', 'error');
+            }
+        });
+
+        document.getElementById('gform_2').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if (!validateGForm2()) return;
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("{{ route('inquiry.submit') }}", {
+                    method: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    },
+                    body: formData
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    showFormMessage('2', result.message || 'Submitted successfully.', 'success');
+                    form.reset();
+                } else {
+                    handleServerErrors(result, '2');
+                }
+            } catch (error) {
+                showFormMessage('2', 'Unexpected error occurred.', 'error');
+            }
+        });
+
+        function handleServerErrors(result, formId) {
+            if (result.errors) {
+                const firstError = Object.values(result.errors)[0][0];
+                showFormMessage(formId, firstError, 'error');
+            } else {
+                showFormMessage(formId, result.message || 'Submission failed.', 'error');
+            }
+        }
     </script>
-
-
 </body>
 
 </html>

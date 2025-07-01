@@ -32,7 +32,7 @@ class ManageService extends Controller
 
             'description' => 'nullable|string',
 
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image'
         ]);
 
         if ($request->hasFile('image')) {
@@ -56,7 +56,7 @@ class ManageService extends Controller
 
             'description' => 'nullable|string',
             
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image'
         ]);
 
         $service=Service::findOrFail($id);
