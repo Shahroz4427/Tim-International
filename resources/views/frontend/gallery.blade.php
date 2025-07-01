@@ -15,7 +15,7 @@
     <title>TIM INTERNATIONAL</title>
 </head>
 
-<body class="wp-singular page-template page-template-100-width page-template-100-width-php page page-id-187 wp-theme-Avada wp-child-theme-Avada-child tribe-js awb-no-sidebars fusion-image-hovers fusion-pagination-sizing fusion-button_type-flat fusion-button_span-no fusion-button_gradient-linear avada-image-rollover-circle-yes avada-image-rollover-yes avada-image-rollover-direction-left fusion-body ltr fusion-sticky-header no-mobile-slidingbar no-mobile-totop avada-has-rev-slider-styles fusion-disable-outline fusion-sub-menu-fade mobile-logo-pos-left layout-wide-mode avada-has-boxed-modal-shadow-none layout-scroll-offset-full avada-has-zero-margin-offset-top fusion-top-header menu-text-align-center mobile-menu-design-modern fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none avada-menu-highlight-style-textcolor fusion-search-form-clean fusion-main-menu-search-overlay fusion-avatar-circle avada-dropdown-styles avada-blog-layout-large avada-blog-archive-layout-large avada-ec-not-100-width avada-ec-meta-layout-sidebar avada-header-shadow-no avada-menu-icon-position-left avada-has-megamenu-shadow avada-has-header-100-width avada-has-pagetitle-bg-parallax avada-has-breadcrumb-mobile-hidden avada-has-titlebar-bar_and_content avada-header-border-color-full-transparent avada-has-pagination-width_height avada-flyout-menu-direction-fade avada-ec-views-v2 fusion-no-touch do-animate" data-awb-post-id="187" style="--viewportWidth: 1366;" cz-shortcut-listen="true">
+<body class="wp-singular page-template page-template-100-width page-template-100-width-php page page-id-187 wp-theme-Avada wp-child-theme-Avada-child tribe-js awb-no-sidebars fusion-image-hovers fusion-pagination-sizing fusion-button_type-flat fusion-button_span-no fusion-button_gradient-linear avada-image-rollover-circle-yes avada-image-rollover-yes avada-image-rollover-direction-left fusion-body ltr fusion-sticky-header no-mobile-slidingbar no-mobile-totop avada-has-rev-slider-styles fusion-disable-outline fusion-sub-menu-fade mobile-logo-pos-left layout-wide-mode avada-has-boxed-modal-shadow-none layout-scroll-offset-full avada-has-zero-margin-offset-top fusion-top-header menu-text-align-center mobile-menu-design-modern fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none avada-menu-highlight-style-textcolor fusion-search-form-clean fusion-main-menu-search-overlay fusion-avatar-circle avada-dropdown-styles avada-blog-layout-large avada-blog-archive-layout-large avada-ec-not-100-width avada-ec-meta-layout-sidebar avada-header-shadow-no avada-menu-icon-position-left avada-has-megamenu-shadow avada-has-header-100-width avada-has-pagetitle-bg-parallax avada-has-breadcrumb-mobile-hidden avada-has-titlebar-bar_and_content avada-header-border-color-full-transparent avada-has-pagination-width_height avada-flyout-menu-direction-fade avada-ec-views-v2 fusion-no-touch do-animate">
 
     <div id="boxed-wrapper">
         <div id="wrapper" class="fusion-wrapper">
@@ -29,17 +29,17 @@
                 </p>
 
                 @php
-                $images = json_decode($gallery->images, true);
-                if (empty($images)) {
-                $images = [
-                'https://placehold.co/600x400?text=Image+1',
-                'https://placehold.co/600x400?text=Image+2',
-                'https://placehold.co/600x400?text=Image+3',
-                'https://placehold.co/600x400?text=Image+4',
-                'https://placehold.co/600x400?text=Image+5',
-                ];
-                }
-                $firstImage = $images[0];
+                    $images = json_decode($gallery->images, true);
+                    if (empty($images)) {
+                    $images = [
+                    'https://placehold.co/600x400?text=Image+1',
+                    'https://placehold.co/600x400?text=Image+2',
+                    'https://placehold.co/600x400?text=Image+3',
+                    'https://placehold.co/600x400?text=Image+4',
+                    'https://placehold.co/600x400?text=Image+5',
+                    ];
+                    }
+                    $firstImage = $images[0];
                 @endphp
 
                 <div class="main-image-wrapper">
