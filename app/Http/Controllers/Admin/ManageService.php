@@ -16,6 +16,7 @@ class ManageService extends Controller
         $recordsPerPage = $request->input('records', 5);
 
         $services = Service::orderBy('id', $sortOrder)->paginate($recordsPerPage);
+        
 
         return view('admin.manage-service.index', compact('services'));
     }

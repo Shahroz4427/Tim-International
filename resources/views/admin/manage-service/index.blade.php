@@ -108,7 +108,6 @@ Services
                 <th>ID#</th>
                 <th>IMAGE</th>
                 <th>NAME</th>
-                <th>DESCRIPTION</th>
                 <th class="text-end">ACTIONS</th>
             </tr>
         </thead>
@@ -130,8 +129,6 @@ Services
                     @endif
                 </td>
                 <td>{{ $service->name }}</td>
-                <td>{!! Str::limit($service->description, 50) !!}</td>
-
                 <td class="text-end">
                     <div class="d-flex justify-content-end gap-2 align-items-center">
                         <a href="{{ route('service.detail', $service->id) }}" class="btn btn-sm btn-danger" target="_blank">

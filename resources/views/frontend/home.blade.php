@@ -139,7 +139,7 @@
                 <div class="contact-container">
                     <h2 class="contact-title">GET IN TOUCH WITH US !</h2>
                     <form id="contactForm" class="contact-form">
-                        <div id="formMessage" style="margin-bottom: 20px;"></div>
+                        <div id="formMessage"></div>
                         @csrf
                         <div class="form-row">
                             <input type="text" placeholder="Full Name" name="first_name" class="form-input" id="first_name" required />

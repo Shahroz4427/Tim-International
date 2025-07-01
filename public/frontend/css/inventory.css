@@ -2818,3 +2818,13 @@ a:hover .ggc_aldetail_title {
         margin-top: 30px;
     }
 }
+span{
+    background-color: transparent !important;
+}
+p{
+    background-color: transparent !important;
+}
+strong
+{
+    background-color: transparent !important;
+}

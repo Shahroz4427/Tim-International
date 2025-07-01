@@ -36,10 +36,10 @@
                                     <h1 class="title entry-title" style="text-transform: uppercase;">{{ $service->name }}</h1>
                                 </div>
 
-                                <div style="display: flex; justify-content: center;">
-                                    <p style="text-align: left; max-width: 86%; font-size: 16px; font-weight:400">
+                                <div class="centered-container">
+                                    <div class="centered-content">
                                         {!! $service->description !!}
-                                    </p>
+                                    </div>
                                 </div>
 
                                 <div class="listing_detail_row">
@@ -96,7 +96,7 @@
                                                     <div class="contact-form">
                                                         <h4>Quick Contact</h4>
                                                         <form id="serviceInquiryForm">
-                                                                                                                
+
                                                             @csrf
                                                             <input type="hidden" name="service" value="{{ $service->name }}">
 
@@ -140,7 +140,7 @@
             @include('frontend.footer')
         </div>
     </div>
-    <script  src="{{ asset('frontend/js/global.js') }}"></script>
+    <script src="{{ asset('frontend/js/global.js') }}"></script>
     <script>
         function showInquiryMessage(msg, type = 'success') {
             const messageBox = document.getElementById('serviceFormMessage');
