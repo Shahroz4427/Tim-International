@@ -28,30 +28,37 @@
                     {!! $gallery->long_description ?? 'No Description' !!}
                 </p>
 
-
                 @php
                 $images = json_decode($gallery->images, true);
-                $firstImage = $images[0] ?? null;
+                if (empty($images)) {
+                $images = [
+                'https://placehold.co/600x400?text=Image+1',
+                'https://placehold.co/600x400?text=Image+2',
+                'https://placehold.co/600x400?text=Image+3',
+                'https://placehold.co/600x400?text=Image+4',
+                'https://placehold.co/600x400?text=Image+5',
+                ];
+                }
+                $firstImage = $images[0];
                 @endphp
 
                 <div class="main-image-wrapper">
                     <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                    <img class="main-image" src="{{ $firstImage ? asset('storage/' . $firstImage) : '' }}" alt="Main Car">
+                    <img class="main-image" src="{{ Str::startsWith($firstImage, 'http') ? $firstImage : asset('storage/' . $firstImage) }}" alt="Main Car">
                     <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
                 </div>
 
                 @php
-                $images = array_reverse(json_decode($gallery->images, true));
+                $images = array_reverse($images);
                 @endphp
 
                 <div class="thumbnail-carousel owl-carousel owl-theme">
                     @foreach($images as $image)
                     <div class="item">
-                        <img src="{{ asset('storage/' . $image) }}" class="thumbnail" alt="thumbnail">
+                        <img src="{{ Str::startsWith($image, 'http') ? $image : asset('storage/' . $image) }}" class="thumbnail" alt="thumbnail">
                     </div>
                     @endforeach
                 </div>
-
 
                 <p class="gallery-description">
                     {!! $gallery->short_description ?? 'No Description' !!}
@@ -61,7 +68,7 @@
             @include('frontend.footer')
         </div>
     </div>
-    <script  src="{{ asset('frontend/js/global.js') }}"></script>
+    <script src="{{ asset('frontend/js/global.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
@@ -77,6 +84,7 @@
                 onInitialized: updateMainImageFromCarousel,
                 onTranslated: updateMainImageFromCarousel
             });
+
             $('.arrow.left').click(function() {
                 owl.trigger('prev.owl.carousel');
             });
@@ -84,6 +92,7 @@
             $('.arrow.right').click(function() {
                 owl.trigger('next.owl.carousel');
             });
+
             $(document).on('click', '.thumbnail', function() {
                 const src = $(this).attr('src');
                 mainImage.src = src;
@@ -91,6 +100,7 @@
                 $('.thumbnail').removeClass('active-thumb');
                 $(this).addClass('active-thumb');
             });
+
             function updateMainImageFromCarousel() {
                 const current = owl.find('.owl-item.active').first().find('img.thumbnail').attr('src');
                 if (current) {
@@ -104,6 +114,7 @@
                     });
                 }
             }
+
             updateMainImageFromCarousel();
         });
     </script>

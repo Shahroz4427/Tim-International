@@ -84,7 +84,6 @@ Route::post('/service-inquiry', [InquirySubmissionController::class, 'storeServi
 Route::post('/car-inquiry', [InquirySubmissionController::class, 'storeCarInquiry'])
   ->name('car.inquiry.submit');
 
-  // routes/web.php
 Route::post('/contact-us/submit-enquiry', [InquirySubmissionController::class, 'storeContactInquiry'])
 ->name('enquiry.submit');
 

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -76,7 +77,7 @@
                                                 data-animationduration="1.0"
                                                 data-animationdelay="0.1"
                                                 data-animationoffset="top-into-view">
-                                               
+
                                                 <p class="welcome-text">
                                                     <span style="color: #000000; font-weight: lighter;">
                                                         Welcome to
@@ -101,6 +102,19 @@
                     </div>
                 </section>
             </div>
+            @php
+            $images = json_decode($gallery->images, true);
+            if (empty($images)) {
+                $images = [
+                'https://placehold.co/600x400?text=Image+1',
+                'https://placehold.co/600x400?text=Image+2',
+                'https://placehold.co/600x400?text=Image+3',
+                'https://placehold.co/600x400?text=Image+4',
+                'https://placehold.co/600x400?text=Image+5',
+                ];
+            }
+            @endphp
+
             <div class="media-gallery-section" style="max-width: 100%;">
                 <div class="media-gallery-overlay"></div>
                 <div class="media-gallery-content">
@@ -109,7 +123,9 @@
                         <button class="gallery-nav-btn left" onclick="prevImage()" style="color:#dbb778">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <img id="mainGalleryImage" src="{{ asset('storage/' . json_decode($gallery->images, true)[0]) }}" alt="Car Image">
+                        <img id="mainGalleryImage"
+                            src="{{ Str::startsWith($images[0], 'http') ? $images[0] : asset('storage/' . $images[0]) }}"
+                            alt="Car Image">
                         <button class="gallery-nav-btn right" onclick="nextImage()" style="color:#dbb778">
                             <i class="fas fa-chevron-right"></i>
                         </button>
@@ -149,15 +165,16 @@
             @include('frontend.footer')
         </div>
     </div>
-    <script  src="{{ asset('frontend/js/global.js') }}"></script>
+    <script src="{{ asset('frontend/js/global.js') }}"></script>
     <script>
-        const images = @json(json_decode($gallery->images));
+        const images = @json($images);
         let currentIndex = 0;
 
         const mainImage = document.getElementById('mainGalleryImage');
 
         function showImage(index) {
-            mainImage.src = `/storage/${images[index]}`;
+            const imageUrl = images[index].startsWith('http') ? images[index] : `/storage/${images[index]}`;
+            mainImage.src = imageUrl;
         }
 
         function nextImage() {

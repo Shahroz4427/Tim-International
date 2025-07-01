@@ -44,8 +44,8 @@
                                                         text ever since the 1500s, when an unknown printer took a galley
                                                         of type and scrambled it to make a type specimen book.</p>
                                                 </div>
-                                                <div id="formMessage_1" style="margin-bottom: 20px;"></div>
-                                                <div id="formMessage_2" style="margin-bottom: 20px;"></div>
+                                                <div id="formMessage_1"></div>
+                                                <div id="formMessage_2"></div>
 
                                             </div>
                                         </div>
