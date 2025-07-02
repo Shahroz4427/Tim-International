@@ -127,7 +127,7 @@ Car Inquiries
         <tbody>
             @forelse($carInquiries as $inquiry)
             <tr class="inquiry-row" data-inquiry-id="{{ $inquiry->id }}">
-                <td>
+                <td style="width: 70px !important;">
                     <button class="btn btn-sm toggle-btn" data-inquiry-id="{{ $inquiry->id }}">
                         <i class="bi bi-chevron-down"></i>
                     </button>

@@ -113,7 +113,7 @@ Contact Us
     <table class="table table-custom table-lg mb-0" id="contacts-table">
         <thead>
             <tr>
-                <th></th> <!-- Toggle Button Column -->
+                <th></th> 
                 <th>ID#</th>
                 <th>Customer</th>
                 <th>Date/Time</th>
@@ -123,7 +123,7 @@ Contact Us
         <tbody>
             @forelse($contacts as $contact)
             <tr class="contact-row" data-contact-id="{{ $contact->id }}">
-                <td>
+                <td style="width: 70px !important;">
                     <button class="btn btn-sm toggle-btn" data-contact-id="{{ $contact->id }}">
                         <i class="bi bi-chevron-down"></i>
                     </button>
@@ -172,7 +172,6 @@ Contact Us
 @push('js')
 <script>
     $(document).ready(function () {
-        // Handle sort and pagination
         $('#recordsPerPage').on('change', updateUrl);
         $('#sortOrder').on('change', updateUrl);
 
